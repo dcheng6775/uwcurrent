@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UW Current</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+
+  body {
+    background-color: #fffdf2;
+  }
+
+  .navbar {
+    padding-top: 1rem;   
+    padding-bottom: 1rem; 
+    background-color: #579faf !important;
+  }
+  .navbar-brand img {
+    width: 6rem;       
+    height: 6rem;      
+    object-fit: contain; 
+    border-radius: 8px;  
+  }
+
+  .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .brand-title {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+  .brand-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: white;
+    }
+
+  .brand-subtitle-first-half {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    display: inline;
+  }
+
+  .brand-subtitle-second-half {
+    font-family: 'Times New Roman', Times, serif;
+    display: inline;
+  }
+
+  .brand-title-first-half {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: inline;
+    color: white;
+  }
+
+  .brand-title-second-half {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    display: inline;
+    color: #113450;
+  }
+
+  .navbar-nav {
+    font-size: 0.9rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+}
+
+   .js-searchbar .form-control {
+    border-radius: 20px; 
+    border-color: #ced4da; 
+    font-family:Georgia, 'Times New Roman', Times, serif !important;;
+
+}
+
+.js-searchbar .btn-outline-success {
+    border-radius: 20px; 
+    color: #113450; 
+    border-color: #11345000;
+    font-size: 1.5rem;
+    }
+
+.js-searchbar .btn-outline-success:hover {
+    font-weight: bold; 
+    background-color: #11345000 !important;
+}
+
+.navbar-collapse .navbar-nav .nav-link {
+    padding-top: 5px !important;    
+    padding-bottom: 5px !important; 
+    font-size: 1.1rem !important;
+}
+
+.header-tagline-section {
+    display: flex;
+    flex-direction: column; 
+    
+    align-items: center; 
+    
+    text-align: right; 
+}
+
+.header-tagline {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: white; 
+    margin-bottom: 0; 
+    display: block !important;
+}
+
+.header-tagline-spacer {
+    text-align: left;
+}
+
+.btn-custom-subscribe {
+    background-color: #113450; 
+    color: #579faf; 
+    border-color: #113450;
+    font-weight: 600; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.375rem 0.75rem; 
+    font-size: 0.9rem; 
+    margin-top: 1rem;      
+
+    --bs-btn-hover-bg: #0d2a41; 
+    --bs-btn-hover-border-color: #0d2a41;
+    --bs-btn-active-bg: #0d2a41; 
+
+}
+
+.article-image {
+    width: 200px;  
+    height: 150px; 
+    object-fit: cover; 
+    display: block; 
+    max-width: 100%; 
+}
+
+.img-fluid {
+    height: auto;
+}
+
+.article-image-narrow {
+    width: 100%; 
+    
+    height: 15rem;     
+    
+    object-fit: cover; 
+    display: block; 
+}
+
+.article-image-wide {
+    width: 100%; 
+    
+    height: 15rem;     
+    
+    object-fit: cover; 
+    display: block; 
+}
+.card {
+    border: none !important; 
+    background-color: transparent !important; 
+    border-radius: 0 !important; 
+}
+
+.card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.card-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.article-info {
+  font-size: 1.1rem;
+  color: #579faf;
+  font-family:'Times New Roman', Times, serif;
+  margin-bottom: 0rem;
+}
+
+.article-title {
+  font-size: 1.2rem;
+  color: #0d2a41;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  margin-top: 0rem;
+}
+
+.main-footer {
+    /* Match the header background color */
+    background-color: #579faf !important;
+    /* Ensure the text is readable */
+    color: white; 
+    /* Add a little vertical padding */
+    padding: 1.5rem 0; 
+    /* Set the font to match your navigation */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+    </style>
+
+<script>
+function toggleSearchbar() {
+    document.querySelector('.js-searchbar').innerHTML = '<input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"/><button class="btn btn-outline-success" type="submit"  onclick="toggleSearchbar();">⌕</button>'
+}
+
+
+
+</script>
+</head>
+  <body>
+
+
+<!--Header part 1 - logo/title/etc -->
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid d-flex justify-content-between">
+        <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        <div class="brand-text">
+            <div class="brand-title">
+                <p class="brand-title-first-half"> WATERLOO</p>
+                <p class="brand-title-second-half"> CURRENT </p>
+            </div>
+            <div class="brand-subtitle">
+                <p class="brand-subtitle-first-half"> University of Waterloo’s CURRENT PUBLICATIONS  &nbsp;&nbsp;&nbsp;</p>
+                <p class="brand-subtitle-second-half"> Est. 2025 </p>
+            </div>
+        </div>
+        </a>
+        
+
+        
+    </div>
+</nav>
+
+<!-- Header part 2 - Navbar -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-top: 0.3rem;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around w-100">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Opinion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Flow Focus</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Meet the Team</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">About</a></li>
+            <li><a class="dropdown-item" href="#">Contact</a></li>
+            <li><a class="dropdown-item" href="#">Join</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex js-searchbar js-notextbox" role="search">
+        <button class="btn btn-outline-success" type="button"  onclick="toggleSearchbar();">⌕</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Website Main Area -->
+
+<div class="container" style="margin-top: 2rem;">
+  <div class="row align-items-start">
+    
+    <div class="col-lg-7">      
+      
+        <div class="row mb-4">
+            
+            <div class="col-8">
+              <div class="card"> 
+                <img src="article1.png" class="card-img-top article-image-wide" alt="...">
+                <div class="card-body">
+                  <p class="article-info">Oct 20, 2025 by Jane Doe</p>
+                  <p class="article-title"> Neurons in Motion: The Link Between Physical Activity and Brain Plasticity</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-4">
+              <div class="card">
+                <img src="article2.png" class="card-img-top article-image-narrow" alt="...">
+                <div class="card-body">
+                  <p class="article-info">Oct 19, 2025 by Bob Current</p>
+                  <p class="article-title"> Engineering 7 Expands with AI & Robotics Annex</p>
+                  </div>
+              </div>
+            </div>
+            
+        </div> 
+
+        <div class="row mb-4">
+            
+            <div class="col-4">
+              <div class="card">
+                <img src="article4.jpg" class="card-img-top article-image-narrow" alt="...">
+                <div class="card-body">
+                  <p class="article-info">Oct 18, 2025 by Jane Current</p>
+                  <p class="article-title"> Lorem ipsum dolor sit amet consectetur adipisicing. </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-8">
+              <div class="card">
+                <img src="article3.jpeg" class="card-img-top article-image-wide" alt="...">
+                <div class="card-body">
+                  <p class="article-info">Oct 17, 2025 by Bob Doe</p>
+                  <p class="article-title"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolores unde maiores? </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+    </div> <div class="col-lg-5" style="text-align: left !important;">
+        <p style="margin-top: 1rem; color: #579faf; font-size: 1.5rem; font-family:'Times New Roman', Times, serif; font-style: italic; margin-left: 9px;"> Sign up to our Newsletter </p>
+        <input type="email" class="form-control" placeholder="Email" style="width: 75%; border-radius: 4px; margin: 0.5rem;"/>
+        <input type="email" class="form-control" placeholder="First Name" style="width: 75%; border-radius: 4px; margin: 0.5rem;"/>
+        <button type="button" class="btn btn-custom-subscribe" style="margin-left: 7px;">SUBSCRIBE</button>
+    </div>
+    
+  </div> 
+</div>
+
+<!-- Footer -->
+
+<footer class="main-footer">
+  <div class="container text-center">
+    
+    <div class="social-links mb-3 d-flex justify-content-center"> 
+        <a href="https://www.instagram.com/uwaterloopremed/" target="_blank" aria-label="Instagram" style="margin: 1rem;"><img src="insta.png" alt="instagram" style="height: 1rem;"></a>
+        <a href="https://www.discord.com" target="_blank" aria-label="Instagram" style="margin: 1rem;"><img src="discord.png" alt="discord" style="height: 1rem;"></a>
+    </div>
+    
+    <p class="mb-0">
+      &copy; <span id="current-year"></span> UW Current. All rights reserved. 
+      | University of Waterloo
+    </p>
+    <p class="mb-0">
+      <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+      &nbsp; &bull; &nbsp;
+      <a href="#" class="text-white text-decoration-none">Terms of Use</a>
+    </p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
+
