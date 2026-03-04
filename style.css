@@ -1,0 +1,218 @@
+/*
+Theme Name: UW Current
+Author: UW Current
+Description: Custom theme for UW Current publication
+Version: 1.0
+*/
+
+
+  body {
+    background-color: #fffdf2;
+  }
+
+  .navbar {
+    padding-top: 1rem;   
+    padding-bottom: 1rem; 
+    background-color: #579faf !important;
+  }
+  .navbar-brand img {
+    width: 6rem;       
+    height: 6rem;      
+    object-fit: contain; 
+    border-radius: 8px;  
+  }
+
+  .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .brand-title {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+  .brand-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: white;
+    }
+
+  .brand-subtitle-first-half {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    display: inline;
+  }
+
+  .brand-subtitle-second-half {
+    font-family: 'Times New Roman', Times, serif;
+    display: inline;
+  }
+
+  .brand-title-first-half {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: inline;
+    color: white;
+  }
+
+  .brand-title-second-half {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    display: inline;
+    color: #113450;
+  }
+
+  .navbar-nav {
+    font-size: 0.9rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+}
+
+   .js-searchbar .form-control {
+    border-radius: 20px; 
+    border-color: #ced4da; 
+    font-family:Georgia, 'Times New Roman', Times, serif !important;;
+
+}
+
+.js-searchbar .btn-outline-success {
+    border-radius: 20px; 
+    color: #113450; 
+    border-color: #11345000;
+    font-size: 1.5rem;
+    }
+
+.js-searchbar .btn-outline-success:hover {
+    font-weight: bold; 
+    background-color: #11345000 !important;
+}
+
+.navbar-collapse .navbar-nav .nav-link {
+    padding-top: 5px !important;    
+    padding-bottom: 5px !important; 
+    font-size: 1.1rem !important;
+}
+
+.header-tagline-section {
+    display: flex;
+    flex-direction: column; 
+    
+    align-items: center; 
+    
+    text-align: right; 
+}
+
+.header-tagline {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: white; 
+    margin-bottom: 0; 
+    display: block !important;
+}
+
+.header-tagline-spacer {
+    text-align: left;
+}
+
+.btn-custom-subscribe {
+    background-color: #113450; 
+    color: #579faf; 
+    border-color: #113450;
+    font-weight: 600; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.375rem 0.75rem; 
+    font-size: 0.9rem; 
+    margin-top: 1rem;      
+
+    --bs-btn-hover-bg: #0d2a41; 
+    --bs-btn-hover-border-color: #0d2a41;
+    --bs-btn-active-bg: #0d2a41; 
+
+}
+
+.article-image {
+    width: 200px;  
+    height: 150px; 
+    object-fit: cover; 
+    display: block; 
+    max-width: 100%; 
+}
+
+.img-fluid {
+    height: auto;
+}
+
+.article-image-narrow {
+    width: 100%; 
+    
+    height: 30rem;     
+    
+    object-fit: cover; 
+    display: block; 
+}
+
+.article-image-wide {
+    width: 100%; 
+    
+    height: 30rem;     
+    
+    object-fit: cover; 
+    display: block; 
+}
+.card {
+    border: none !important; 
+    background-color: transparent !important; 
+    border-radius: 0 !important; 
+}
+
+.card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.card-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.article-info {
+  font-size: 1.1rem;
+  color: #579faf;
+  font-family:'Times New Roman', Times, serif;
+  margin-bottom: 0rem;
+}
+
+.article-title {
+  font-size: 1.2rem;
+  color: #0d2a41;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  margin-top: 0rem;
+}
+
+.main-footer {
+    /* Match the header background color */
+    background-color: #579faf !important;
+    /* Ensure the text is readable */
+    color: white; 
+    /* Add a little vertical padding */
+    padding: 1.5rem 0; 
+    /* Set the font to match your navigation */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
