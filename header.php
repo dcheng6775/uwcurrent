@@ -79,7 +79,7 @@
           <a class="nav-link" href="<?php echo site_url(); ?>">Home</a>
         </li>
         <li class="nav-item">
-         <a class="nav-link" href="<?php echo site_url('/category/all-news/'); ?>">News</a>
+         <a class="nav-link" href="<?php echo site_url('/category/news/'); ?>">News</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?php echo site_url('/category/opinion/'); ?>">Opinion</a>
