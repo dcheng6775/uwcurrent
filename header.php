@@ -59,7 +59,7 @@
               <a href="mailto:uwaterloocurrent@gmail.com" target="_blank" aria-label="Email" style="margin: 0 0.8rem;">
                 <img src="<?php echo get_theme_file_uri('/assets/images/email.png'); ?>" alt="Email" style="height: 1.2rem;">
               </a>
-              <a href="https://www.forms.google.com" target="_blank" class="btn btn-outline-dark btn-sm" style="margin-left: 0.5rem; border-radius: 20px; padding: 5px 15px; border-color: #ffffff; color: #ffffff; background-color: transparent;"> Subscribe </a>        
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOYBYPRhLAJ-Iw4XgurikRgKfz1dwew2biidru4gsowVZXwQ/viewform" target="_blank" class="btn btn-outline-dark btn-sm" style="margin-left: 0.5rem; border-radius: 20px; padding: 5px 15px; border-color: #ffffff; color: #ffffff; background-color: transparent;"> Subscribe </a>        
             </div>
 
         </div>
